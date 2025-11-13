@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Itim&family=Italiana&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <div class="container">
+
+    <h1>MY PORTFOLIO</h1>
+
+    <nav id="navMenu">
+      <a href="index.html" id="active-btn">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <div class="content">
+      <div class="text">
+        <p>Hello, my name is Jhon Paul T. Saraña wanna</p>
+        <p>learn with purpose, innovate with vision, turn</p>
+        <p>ideas into reality, and shape tomorrow’s tech</p>
+        <p>today.</p>
+      </div>
+
+      <img src="Popop.jpg" alt="Profile Picture" class="profile">
+    </div>
+
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("navMenu");
+      nav.classList.toggle("show");
+    }
+
+    const navLinks = document.querySelectorAll("#navMenu a");
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        const nav = document.getElementById("navMenu");
+        if (nav.classList.contains("show")) {
+          nav.classList.remove("show");
+        }
+      });
+    });
+  </script>
+
+
+<script>
+document.querySelector('.hamburger').addEventListener('click', function() {
+  document.querySelector('#nav-menu').classList.toggle('active');
+});
+</script>
+
+</body>
+</html>

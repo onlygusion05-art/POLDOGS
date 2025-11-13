@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <link rel="stylesheet" href="about.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Itim&family=Italiana&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <div class="container">
+
+    <h1>ABOUT ME</h1>
+
+    <nav id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="about.html" id="active-btn">About</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <div class="content">
+
+      <div class="text">
+        <p>Hi! I'm Jhon Paul T. Saraña, an IT student. I love learning new IT skills and exploring web development.</p>
+
+        <h2>PROJECTS</h2>
+        <ul>
+          <li>Enrollment System</li>
+          <li>Water Billing System</li>
+          <li>Passport System</li>
+          <li>Cashiering System</li>
+        </ul>
+
+        <h2>TECH STACK</h2>
+        <div class="tech-stack">
+          <img src="c++.png" alt="C++ Logo" class="tech-icon">
+          <img src="php.png" alt="PHP Logo" class="tech-icon">
+        </div>
+      </div>
+
+      <img src="Popop.jpg" alt="Profile Picture" class="profile">
+
+    </div>
+
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("navMenu");
+      nav.classList.toggle("show");
+    }
+
+    const navLinks = document.querySelectorAll("#navMenu a");
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        const nav = document.getElementById("navMenu");
+        if (nav.classList.contains("show")) {
+          nav.classList.remove("show");
+        }
+      });
+    });
+  </script>
+
+
+<script>
+document.querySelector('.hamburger').addEventListener('click', function() {
+  document.querySelector('#nav-menu').classList.toggle('active');
+});
+</script>
+
+</body>
+</html>
